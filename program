@@ -1,0 +1,35 @@
+switch (operator) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                if (num2 != 0) {
+                    result = num1 / num2;
+                } else {
+                    System.out.println("Error: Pembagian dengan nol tidak valid.");
+                    return;
+                }
+                break;
+            case '^':
+                if (num2 == 2) {
+                    result = Math.pow(num1, 2);
+                } else if (num2 == 3) {
+                    result = Math.pow(num1, 3);
+                } else {
+                    System.out.println("Error: Perpangkatan hanya tersedia untuk 2 dan 3.");
+                    return;
+                }
+                break;
+            case '%':
+                result = num1 % num2;
+                break;
+            default:
+                System.out.println("Error: Operator tidak valid.");
+                return;
+        }
