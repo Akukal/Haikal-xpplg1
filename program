@@ -1,35 +1,37 @@
-switch (operator) {
-            case '+':
-                result = num1 + num2;
-                break;
-            case '-':
-                result = num1 - num2;
-                break;
-            case '*':
-                result = num1 * num2;
-                break;
-            case '/':
-                if (num2 != 0) {
-                    result = num1 / num2;
-                } else {
-                    System.out.println("Error: Pembagian dengan nol tidak valid.");
-                    return;
-                }
-                break;
-            case '^':
-                if (num2 == 2) {
-                    result = Math.pow(num1, 2);
-                } else if (num2 == 3) {
-                    result = Math.pow(num1, 3);
-                } else {
-                    System.out.println("Error: Perpangkatan hanya tersedia untuk 2 dan 3.");
-                    return;
-                }
-                break;
-            case '%':
-                result = num1 % num2;
-                break;
-            default:
-                System.out.println("Error: Operator tidak valid.");
-                return;
-        }
+private void bt_hasilActionPerformed(java.awt.event.ActionEvent evt) {
+    // Deklarasi variabel
+    double bill;
+    double bil2 = Double.parseDouble(String.valueOf(txt_hasil.getText()));
+    double jumlah = 0.0;
+
+    // Hitung berdasarkan nilai pilih
+    switch (pilih) {
+        case 1:
+            jumlah = bill + bil2;
+            break;
+        case 2:
+            jumlah = bill - bil2;
+            break;
+        case 3:
+            jumlah = bill * bil2;
+            break;
+        case 4:
+            if (bil2 != 0) {
+                jumlah = bill / bil2;
+            } else {
+            }
+            break;
+        case 5: // Fungsi perpangkatan 2
+            jumlah = Math.pow(bill, bil2);
+            break;
+        case 6: // Fungsi perpangkatan 3
+            jumlah = Math.pow(bill, Math.pow(bil2, 3));
+            break;
+        case 7: // Fungsi modulus
+            jumlah = bill % bil2;
+            break;
+        default:
+            break;
+    }
+    txt_hasil.setText(Double.toString(jumlah));
+}
