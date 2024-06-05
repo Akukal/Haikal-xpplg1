@@ -19,7 +19,7 @@ private void bt_hasilActionPerformed(java.awt.event.ActionEvent evt) {
             if (bil2 != 0) {
                 jumlah = bill / bil2;
             } else {
-            System.out.print("Tidak bisa melakukan pembagian 0")
+            System.out.println("Tidak bisa melakukan pembagian 0")
             }
             break;
         case 5: // Fungsi perpangkatan 2
@@ -32,7 +32,7 @@ private void bt_hasilActionPerformed(java.awt.event.ActionEvent evt) {
             jumlah = bill % bil2;
             break;
         default:
-            System.out.print("Operator tidak valid")
+            System.out.println("Operator tidak valid")
             break;
     }
     txt_hasil.setText(Double.toString(jumlah));
